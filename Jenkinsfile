@@ -1,17 +1,24 @@
 Pipeline{
 agent any
 stages{
-stage("checkout"){
+stage('clone'){
   steps{
+    echo "this is cloning"
+  }
     }
-    }
-stage("build"){
+stage('build'){
  steps{
+   echo "build with maven"
   }
   }
- stage("deploy"){
+ stage('test'){
    steps{
+     echo "test result"
     }
    }
-  }
+  stage('deploy'){
+    echo "deploy"
+}
+}
+}
 }
